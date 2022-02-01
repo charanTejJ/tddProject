@@ -131,5 +131,18 @@ public class CalculateNumbersTest {
         assertEquals(result, 3);
         result = calculateNumbers.Add("//[.][?]\n1.2?3");
         assertEquals(result, 6);
+        result = calculateNumbers.Add("//[.][?]\n1?2.3");
+        assertEquals(result, 6);
+    }
+
+    @Test
+    public void longerLengthDelimitersWithMultipleListFormatTest() throws  Exception{
+        int result;
+        result = calculateNumbers.Add("//[,,,,][%]\n2,,,,3%4,5");
+        assertEquals(result, 14);
+        result = calculateNumbers.Add("//[****][????]\n1****2????3");
+        assertEquals(result, 6);
+        result = calculateNumbers.Add("//[aaa][?]\n1?2aaa3aaa1009");
+        assertEquals(result, 6);
     }
 }
