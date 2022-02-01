@@ -32,9 +32,9 @@ public class CalculateNumbers {
             for (String number: numbersList){
                 if(!number.equals("")){
                     int num = Integer.parseInt(number);
-                    if ( num > -1){
+                    if ( num > -1 && num <1001){
                         ans += num;
-                    } else {
+                    } else if (num < 0) {
                        nString =  nString+ num + ",";
                     }
                 }

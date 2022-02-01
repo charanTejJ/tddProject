@@ -26,7 +26,7 @@ public class CalculateNumbersTest {
     @Test
     public void addNumbersWithSingleDelimiterTest() throws  Exception{
         int result;
-        result = calculateNumbers.Add("1,2\n3,4,5");
+        result = calculateNumbers.Add("1,2,3,4,5");
         assertEquals(result, 15);
         result = calculateNumbers.Add("1,2\n3,4,5");
         assertEquals(result, 15);
@@ -96,5 +96,20 @@ public class CalculateNumbersTest {
         assertEquals(result, 15);
         result = calculateNumbers.Add("1B2,3,4,5");
         assertEquals(result, 15);
+    }
+    @Test
+    public void addNumbersGreaterThan1000Test() throws  Exception{
+        int result;
+        result = calculateNumbers.Add("1000,2,3,4,5");
+        assertEquals(result, 1014);
+
+        result = calculateNumbers.Add("1001,2,3,4,5");
+        assertEquals(result, 14);
+
+        result = calculateNumbers.Add("1001,2000,3,4,5");
+        assertEquals(result, 12);
+
+        result = calculateNumbers.Add("1001,2000,3,4");
+        assertEquals(result, 7);
     }
 }
