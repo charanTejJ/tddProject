@@ -24,7 +24,7 @@ public class CalculateNumbersTest {
         assertEquals(result, 15);
     }
     @Test
-    public void addNumbersWithSingleDelimiterTest() throws  Exception{
+    public void addNumbersWithMultipleDelimiterTest() throws  Exception{
         int result;
         result = calculateNumbers.Add("1,2,3,4,5");
         assertEquals(result, 15);
@@ -111,5 +111,14 @@ public class CalculateNumbersTest {
 
         result = calculateNumbers.Add("1001,2000,3,4");
         assertEquals(result, 7);
+    }
+
+    @Test
+    public void delimitersWithListFormatTest() throws  Exception{
+        int result;
+        result = calculateNumbers.Add("//[,]\n2,3,4,5");
+        assertEquals(result, 14);
+        result = calculateNumbers.Add("//[,,,]\n1,,,2");
+        assertEquals(result, 3);
     }
 }

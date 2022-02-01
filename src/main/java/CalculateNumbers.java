@@ -20,9 +20,14 @@ public class CalculateNumbers {
             String[] splitString = numbers.split("\n");
             if (splitString[0].contains("//")) {
                 String DelimString = splitString[0];
-                String Delim = DelimString.split("//")[1];
+                String[] Delims = DelimString.split("[// \\[ \\] ]");
+                String DelimValue = "[";
+                for (String  value: Delims){
+                    DelimValue += value;
+                }
+                DelimValue+= "]";
                 String numbs = splitString[1];
-                numbersList = Arrays.asList(numbs.split(Delim));
+                numbersList = Arrays.asList(numbs.split(DelimValue));
             } else {
                 numbersList = Arrays.asList(numbers.split("[^0-9]"));
             }
