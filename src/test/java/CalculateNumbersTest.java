@@ -144,5 +144,7 @@ public class CalculateNumbersTest {
         assertEquals(result, 6);
         result = calculateNumbers.Add("//[aaa][?]\n1?2aaa3aaa1009");
         assertEquals(result, 6);
+        result = calculateNumbers.Add("//[aba][?]\n1?2aba3aba1009");
+        assertEquals(result, 6);
     }
 }
