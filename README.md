@@ -1,4 +1,4 @@
-# tddProject
+# tddProject - Add numbers seperated by delimiters
 The repository contains TDD project developed for adding numbers given in string format and also contains test cases to test all the possible scenarios.
 
 **Input Format**: 
