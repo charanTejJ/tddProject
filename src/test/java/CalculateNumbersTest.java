@@ -121,4 +121,15 @@ public class CalculateNumbersTest {
         result = calculateNumbers.Add("//[,,,]\n1,,,2");
         assertEquals(result, 3);
     }
+
+    @Test
+    public void delimitersWithMultipleListFormatTest() throws  Exception{
+        int result;
+        result = calculateNumbers.Add("//[,][%]\n2,3%4,5");
+        assertEquals(result, 14);
+        result = calculateNumbers.Add("//[.][?]\n1.2");
+        assertEquals(result, 3);
+        result = calculateNumbers.Add("//[.][?]\n1.2?3");
+        assertEquals(result, 6);
+    }
 }
