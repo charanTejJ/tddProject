@@ -87,4 +87,14 @@ public class CalculateNumbersTest {
             assertTrue(exceptionThrown);
         }
     }
+    @Test
+    public void addNumbersWithAlphabetTest() throws  Exception{
+        int result;
+        result = calculateNumbers.Add("1P2,3,4,5");
+        assertEquals(result, 15);
+        result = calculateNumbers.Add("1A2,3,4,5");
+        assertEquals(result, 15);
+        result = calculateNumbers.Add("1B2,3,4,5");
+        assertEquals(result, 15);
+    }
 }

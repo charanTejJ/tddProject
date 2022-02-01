@@ -24,7 +24,7 @@ public class CalculateNumbers {
                 String numbs = splitString[1];
                 numbersList = Arrays.asList(numbs.split(Delim));
             } else {
-                numbersList = Arrays.asList(numbers.split("\\W"));
+                numbersList = Arrays.asList(numbers.split("[^0-9]"));
             }
 
         }
