@@ -26,3 +26,14 @@ Note: The delimiter can be of any length and more than one delimiter can ge give
 
 **Output Format**:
 returns the sum of the numbers
+
+
+** --- Test Results --- **
+
+![image](https://user-images.githubusercontent.com/98839557/152100970-8ed68676-031e-4117-9875-58df8cf441fb.png)
+
+** --- Code Coverage --- **
+
+![image](https://user-images.githubusercontent.com/98839557/152101078-58055a7e-382d-47d2-bc9e-0beab95c5010.png)
+
+
