@@ -7,7 +7,7 @@ The repository contains TDD project developed for adding numbers given in string
 
 1. //delimeter\n numbers seperated by delimiter 
 2. //[delimeter]\n numbers seperated by delimiter
-3. //[delimeter1] [delimeter2]\n numbers seperated by delimiter1 or delimiter2
+3. //[delimeter1] [delimeter2]...\n numbers seperated by delimiter1 or delimiter2 or....  (... Says and so on)
 
 **Description Examples:** 
 
